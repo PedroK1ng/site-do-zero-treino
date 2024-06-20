@@ -1,3 +1,4 @@
+// menu responsivo
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
     this.mobileMenu = document.querySelector(mobileMenu);
@@ -42,3 +43,25 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list li"
 );
 mobileNavbar.init();
+
+// menu responsivo
+
+// animation
+
+document.addEventListener("DOMContentLoaded", function () {
+  const text = "Este é um texto que será digitado como uma animação.";
+  const typingText = document.getElementById("typing-text");
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      typingText.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 100); // ajusta a velocidade de digitação
+    }
+  }
+
+  type();
+});
+
+// animation
